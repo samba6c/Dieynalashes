@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lashes Extension By Diee</title>
+    <style>
+        /* Styles Généraux */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf5f7; /* Rose très pâle */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* En-tête / Logo */
+        header {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #d4af37; /* Ligne dorée */
+        }
+
+        .logo-text {
+            font-family: 'Cursive', 'Brush Script MT', sans-serif;
+            font-size: 3rem;
+            color: #000;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #d4af37;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section (Image de fond stylisée) */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+                        url('https://images.unsplash.com/photo-1583001809270-78c1af9c9580?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cursive', serif;
+            font-size: 2.5rem;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px 40px;
+            border-radius: 50px;
+        }
+
+        /* Sections */
+        .container {
+            max-width: 900px;
+            margin: -50px auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #fce4ec;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .list-items {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .list-items li::before {
+            content: "✓ ";
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* Bouton WhatsApp */
+        .cta-whatsapp {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            background-color: #25D366; /* Vert WhatsApp */
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: #128C7E;
+        }
+
+        /* Footer / Contact */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .contact-info {
+            margin: 10px 0;
+        }
+
+        .insta-link {
+            color: #d4af37;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">Lashes Extension</div>
+        <div class="subtitle">By Diee</div>
+    </header>
+
+    <section class="hero">
+        <h1>Sublimez votre regard</h1>
+    </section>
+
+    <div class="container">
+        <h2>Nos styles disponibles</h2>
+        <ul class="list-items">
+            <li>Volume</li>
+            <li>Mega Volume</li>
+            <li>Effet naturel</li>
+            <li>Effet glamour</li>
+        </ul>
+
+        <h2>Pourquoi nous choisir ?</h2>
+        <ul class="list-items">
+            <li>Tenue longue durée</li>
+            <li>Finition parfaite</li>
+            <li>Regard intense et élégant</li>
+            <li>Travail soigné et professionnel</li>
+        </ul>
+
+        <a href="https://wa.me/221785453016?text=Bonjour,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20pose%20de%20cils." class="cta-whatsapp">
+            Prendre rendez-vous sur WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        <div class="contact-info">📍 Diamaguene Sicap</div>
+        <div class="contact-info">📞 contact : 78 545 30 16</div>
+        <div class="contact-info">
+            <a href="https://instagram.com/poupée_dieyna" class="insta-link">@poupée_dieyna</a>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 20px;">Déplacement à domicile sur rendez-vous</p>
+    </footer>
+
+</body>
+</html>
