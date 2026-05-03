@@ -3,173 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lashes Extension By Diee</title>
+    <title>Lashes By Diee | Luxury Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Styles Généraux */
+        :root {
+            --gold: #D4AF37;
+            --pink: #FFC1CC;
+            --dark: #1a1a1a;
+            --light: #fff5f7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fdf5f7; /* Rose très pâle */
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
         }
 
-        /* En-tête / Logo */
-        header {
-            background-color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 3px solid #d4af37; /* Ligne dorée */
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .logo-text {
-            font-family: 'Cursive', 'Brush Script MT', sans-serif;
-            font-size: 3rem;
-            color: #000;
-            margin: 0;
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #d4af37;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255, 245, 247, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        /* Hero Section (Image de fond stylisée) */
+        .logo { font-family: 'Playfair Display', serif; font-weight: bold; font-size: 1.2rem; color: var(--gold); }
+
+        /* --- SECTION ACCUEIL --- */
         .hero {
-            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-                        url('https://images.unsplash.com/photo-1583001809270-78c1af9c9580?auto=format&fit=crop&q=80&w=1000');
-            background-size: cover;
-            background-position: center;
-            height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
             text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle, rgba(255,193,204,0.2) 0%, rgba(255,255,255,1) 100%);
         }
 
-        .hero h1 {
-            font-family: 'Cursive', serif;
-            font-size: 2.5rem;
-            color: #333;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px 40px;
-            border-radius: 50px;
+        .hero h1 { 
+            font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px;
+            animation: fadeInUp 1s ease-out;
         }
 
-        /* Sections */
-        .container {
-            max-width: 900px;
-            margin: -50px auto 40px;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .hero p { animation: fadeInUp 1.2s ease-out; font-style: italic; color: #666; }
+
+        /* --- PHOTOS QUI BOUGENT (L'effet que tu voulais) --- */
+        .floating-img {
+            width: 280px; height: 350px;
+            margin: 30px 0;
+            border-radius: 150px 150px 0 0; /* Forme arche moderne */
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            animation: float 4s ease-in-out infinite;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            text-align: center;
-            color: #333;
-            border-bottom: 2px solid #fce4ec;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        /* --- SECTION SERVICES --- */
+        .services { padding: 80px 20px; background: white; border-radius: 50px 50px 0 0; }
+
+        .service-card {
+            background: var(--light);
+            padding: 25px; border-radius: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--gold);
+            transition: 0.3s;
         }
 
-        .list-items {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        .service-card:hover { transform: scale(1.02); background: #fff; }
+
+        /* --- BOUTON WHATSAPP VIBRANT --- */
+        .btn-whatsapp {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25D366; color: white;
+            padding: 15px 25px; border-radius: 50px;
+            text-decoration: none; font-weight: bold;
+            display: flex; align-items: center; gap: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 1001;
+            animation: fadeInUp 2s;
         }
 
-        .list-items li::before {
-            content: "✓ ";
-            color: #d4af37;
-            font-weight: bold;
-        }
+        /* --- FOOTER --- */
+        footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; }
 
-        /* Bouton WhatsApp */
-        .cta-whatsapp {
-            display: block;
-            width: fit-content;
-            margin: 40px auto;
-            background-color: #25D366; /* Vert WhatsApp */
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .cta-whatsapp:hover {
-            transform: scale(1.05);
-            background-color: #128C7E;
-        }
-
-        /* Footer / Contact */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .contact-info {
-            margin: 10px 0;
-        }
-
-        .insta-link {
-            color: #d4af37;
-            text-decoration: none;
-        }
+        .insta-link { color: var(--pink); text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-text">Lashes Extension</div>
-        <div class="subtitle">By Diee</div>
-    </header>
+    <nav>
+        <div class="logo">DIEEYA LASHES</div>
+        <div style="font-size: 0.8rem; letter-spacing: 2px;">PREMIUM STUDIO</div>
+    </nav>
 
-    <section class="hero">
-        <h1>Sublimez votre regard</h1>
+    <section class="hero" id="home">
+        <p>Lashes Extension By Diee</p>
+        <h1>L'art de sublimer <br>votre regard</h1>
+        <img src="photo_accueil.jpg" alt="Regard" class="floating-img">
+        <a href="#services" style="color: var(--gold); text-decoration: none; font-weight: bold;">Découvrir mes services ↓</a>
     </section>
 
-    <div class="container">
-        <h2>Nos styles disponibles</h2>
-        <ul class="list-items">
-            <li>Volume</li>
-            <li>Mega Volume</li>
-            <li>Effet naturel</li>
-            <li>Effet glamour</li>
-        </ul>
+    <section class="services" id="services">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 30px; text-align: center;">Mes Prestations</h2>
+        
+        <div class="service-card">
+            <h3>Volume Russe</h3>
+            <p>Pour un regard intense et glamour. Idéal pour les grandes occasions.</p>
+        </div>
 
-        <h2>Pourquoi nous choisir ?</h2>
-        <ul class="list-items">
-            <li>Tenue longue durée</li>
-            <li>Finition parfaite</li>
-            <li>Regard intense et élégant</li>
-            <li>Travail soigné et professionnel</li>
-        </ul>
+        <div class="service-card">
+            <h3>Pose Cil à Cil</h3>
+            <p>Un effet naturel pour sublimer vos cils au quotidien.</p>
+        </div>
 
-        <a href="https://wa.me/221785453016?text=Bonjour,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20pose%20de%20cils." class="cta-whatsapp">
-            Prendre rendez-vous sur WhatsApp
-        </a>
-    </div>
+        <div class="service-card">
+            <h3>Rehaussement</h3>
+            <p>Courbure parfaite de vos cils naturels pendant 6 à 8 semaines.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/221785453016" class="btn-whatsapp">
+        Prendre RDV (WhatsApp)
+    </a>
 
     <footer>
-        <div class="contact-info">📍 Diamaguene Sicap</div>
-        <div class="contact-info">📞 contact : 78 545 30 16</div>
-        <div class="contact-info">
-            <a href="https://instagram.com/poupée_dieyna" class="insta-link">@poupée_dieyna</a>
-        </div>
-        <p style="font-size: 0.8rem; margin-top: 20px;">Déplacement à domicile sur rendez-vous</p>
+        <p>📍 Diamaguene Sicap Mbao</p>
+        <p>📞 78 545 30 16</p>
+        <br>
+        <a href="https://instagram.com/poupée_dieyna" class="insta-link">Suivez-moi sur Instagram</a>
+        <p style="margin-top: 30px; opacity: 0.5; font-size: 0.7rem;">© 2024 Lashes By Diee - Luxury Experience</p>
     </footer>
 
 </body>
