@@ -1,5 +1,4 @@
-
-html_<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -285,8 +284,11 @@ section{
 }
 
 .payment-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
 .payment-card h3 {
@@ -426,7 +428,7 @@ footer a:hover {
 <header>
 
   <div class="badge">
-    ✨ Tabaski — Réservez votre glow beauty
+    ✨ La Tabaski approche pensez à réserver votre glow beauty
   </div>
 
   <div class="fade">
@@ -501,13 +503,13 @@ footer a:hover {
   <div class="payment-grid">
 
     <div class="payment-card">
-      <div class="payment-icon">📱</div>
+      <img src="https://www.wave.com/img/nav-logo.png" alt="Wave" class="payment-icon">
       <h3>Wave</h3>
       <p>Paiement rapide et sécurisé via Wave</p>
     </div>
 
     <div class="payment-card">
-      <div class="payment-icon">💵</div>
+      <div class="payment-icon" style="font-size:3rem; display:flex; align-items:center; justify-content:center;">💵</div>
       <h3>Cash</h3>
       <p>Paiement en espèces sur place</p>
     </div>
@@ -547,7 +549,7 @@ footer a:hover {
   </div>
   <div class="footer-line">
     <span class="footer-icon">📞</span>
-    <span>78 545 30 16</span>
+    <a href="tel:+221785453016">78 545 30 16</a>
   </div>
   <div class="footer-line">
     <span class="footer-icon">📍</span>
@@ -576,6 +578,4 @@ revealOnScroll();
 </script>
 
 </body>
-</html>'''
-
-with 
+</html>
