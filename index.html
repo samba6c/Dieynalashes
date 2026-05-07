@@ -1,5 +1,5 @@
 
-html_code = '''<!DOCTYPE html>
+html_<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -321,12 +321,35 @@ input,select{
   color:#fff;
   border: 1px solid rgba(201,168,106,0.1);
   transition: 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input:focus, select:focus {
   outline: none;
   border-color: var(--gold);
   box-shadow: 0 0 10px rgba(201,168,106,0.2);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 0.9rem;
+  pointer-events: none;
 }
 
 /* FOOTER */
@@ -338,10 +361,26 @@ footer{
   background: linear-gradient(180deg, transparent, rgba(201,168,106,0.05));
 }
 
+.footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+}
+
 footer a {
   color: var(--gold);
   text-decoration: none;
   transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 footer a:hover {
@@ -484,12 +523,16 @@ footer a:hover {
   <div class="form">
 
     <input type="text" placeholder="Nom complet">
-    <select>
-      <option>Volume</option>
-      <option>Mega Volume</option>
-      <option>Natural Look</option>
-      <option>Glam Effect</option>
-    </select>
+    
+    <div class="select-wrapper">
+      <select>
+        <option>Volume</option>
+        <option>Mega Volume</option>
+        <option>Natural Look</option>
+        <option>Glam Effect</option>
+      </select>
+      <span class="select-arrow">▼</span>
+    </div>
 
     <button class="btn">Envoyer sur WhatsApp</button>
 
@@ -498,7 +541,18 @@ footer a:hover {
 </section>
 
 <footer>
-  <a href="https://instagram.com/poupee_dieyna" target="_blank">Instagram @poupee_dieyna</a> • 78 545 30 16 • Diamaguene Sicap Mbao
+  <div class="footer-line">
+    <span class="footer-icon">📸</span>
+    <a href="https://instagram.com/poupee_dieyna" target="_blank">@poupee_dieyna</a>
+  </div>
+  <div class="footer-line">
+    <span class="footer-icon">📞</span>
+    <span>78 545 30 16</span>
+  </div>
+  <div class="footer-line">
+    <span class="footer-icon">📍</span>
+    <span>Diamaguene Sicap Mbao</span>
+  </div>
 </footer>
 
 <script>
@@ -524,7 +578,4 @@ revealOnScroll();
 </body>
 </html>'''
 
-with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
-    f.write(html_code)
-
-print
+with 
