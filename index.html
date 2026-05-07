@@ -351,6 +351,16 @@ input[type="date"], input[type="time"] {
   pointer-events: none;
 }
 
+/* ===== FORM LABELS ===== */
+.form-label {
+  display: block;
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin: 15px 0 5px 5px;
+  text-align: left;
+  font-weight: 500;
+}
+
 /* ===== WHY SECTION COMPACT ===== */
 .why-compact {
   padding: 40px 12%;
@@ -614,10 +624,13 @@ footer a:hover {
       <span class="select-arrow">▼</span>
     </div>
 
+    <label for="date" class="form-label">📅 Choisissez une date</label>
     <input type="date" id="date" required>
+
+    <label for="heure" class="form-label">⏰ Choisissez une heure</label>
     <input type="time" id="heure" required>
 
-    <button class="btn" onclick="envoyerWhatsApp()">Envoyer sur WhatsApp</button>
+    <button class="btn" onclick="envoyerWhatsApp()" style="margin-top:20px;">Envoyer sur WhatsApp</button>
 
   </div>
 
