@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lashes Extension By Diee</title>
+<title>Make up & Lashes Extensions By Diee</title>
 
 <!-- LUXURY FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -97,6 +97,9 @@ h1{
   transition:0.4s;
   cursor: pointer;
   text-decoration: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
 }
 
 .btn:hover{
@@ -170,27 +173,16 @@ section{
   box-shadow: 0 15px 40px rgba(201,168,106,0.15);
 }
 
-/* ===== WHY SECTION LUXE ===== */
-.why{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+.card-price {
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-.why-box{
-  background:linear-gradient(145deg,#141414,#1c1c1c);
-  padding:25px;
-  border-radius:20px;
-  text-align:center;
-  border:1px solid rgba(201,168,106,0.15);
-  transition:0.4s;
-  position: relative;
-}
-
-.why-box:hover{
-  transform:scale(1.05);
-  border-color:var(--gold);
-  box-shadow: 0 10px 30px rgba(201,168,106,0.1);
+.card-motif {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 /* ===== GALLERY ===== */
@@ -326,12 +318,17 @@ input,select{
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-family: 'Inter', sans-serif;
 }
 
 input:focus, select:focus {
   outline: none;
   border-color: var(--gold);
   box-shadow: 0 0 10px rgba(201,168,106,0.2);
+}
+
+input[type="date"], input[type="time"] {
+  color-scheme: dark;
 }
 
 .select-wrapper {
@@ -352,6 +349,44 @@ input:focus, select:focus {
   color: var(--gold);
   font-size: 0.9rem;
   pointer-events: none;
+}
+
+/* ===== WHY SECTION COMPACT ===== */
+.why-compact {
+  padding: 40px 12%;
+}
+
+.why-compact .title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.why-compact .title::after {
+  width: 40px;
+  margin-top: 10px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.why-box{
+  background:linear-gradient(145deg,#141414,#1c1c1c);
+  padding:18px;
+  border-radius:15px;
+  text-align:center;
+  border:1px solid rgba(201,168,106,0.15);
+  transition:0.4s;
+  font-size: 0.9rem;
+}
+
+.why-box:hover{
+  transform:scale(1.03);
+  border-color:var(--gold);
 }
 
 /* FOOTER */
@@ -418,6 +453,7 @@ footer a:hover {
   section { padding: 60px 5%; }
   .gallery-item { width: 260px; height: 320px; }
   .badge { font-size: 0.7rem; padding: 8px 14px; }
+  .why-compact { padding: 30px 5%; }
 }
 
 </style>
@@ -428,20 +464,21 @@ footer a:hover {
 <header>
 
   <div class="badge">
-    ✨ La Tabaski approche pensez à réserver votre glow beauty
+    ✨ Tabaski — Réservez votre glow beauty
   </div>
 
   <div class="fade">
-    <h1>Lashes Extension By Diee</h1>
-    <div class="subtitle">Luxury eyelash experience</div>
+    <h1>Make up & Lashes Extensions By Diee</h1>
+    <div class="subtitle">Luxury beauty experience</div>
     <a href="#book" class="btn">Réserver un rendez-vous</a>
   </div>
 
 </header>
 
+<!-- ===== SERVICES LASHES ===== -->
 <section class="reveal">
 
-  <div class="title">Nos Services</div>
+  <div class="title">Nos Services Lashes</div>
 
   <div class="grid">
 
@@ -454,24 +491,32 @@ footer a:hover {
 
 </section>
 
+<!-- ===== SERVICES MAQUILLAGE ===== -->
 <section class="reveal">
 
-  <div class="title">Pourquoi nous choisir</div>
+  <div class="title">Nos Services Maquillage</div>
 
-  <div class="why">
+  <div class="grid">
 
-    <div class="why-box">Finition luxe & précision</div>
-    <div class="why-box">Résultats longue durée</div>
-    <div class="why-box">Style naturel ou glam</div>
-    <div class="why-box">Service à domicile disponible</div>
+    <div class="card">
+      <div class="card-motif">💄✨</div>
+      Maquillage Simple
+      <div class="card-price">3.000 FCFA</div>
+    </div>
+    <div class="card">
+      <div class="card-motif">💋🌸</div>
+      Maquillage Complet
+      <div class="card-price">4.000 FCFA</div>
+    </div>
 
   </div>
 
 </section>
 
+<!-- ===== GALERIE LASHES ===== -->
 <section class="reveal">
 
-  <div class="title">Galerie</div>
+  <div class="title">Galerie Lashes</div>
 
   <div class="gallery-container">
     <div class="gallery-track">
@@ -496,6 +541,35 @@ footer a:hover {
 
 </section>
 
+<!-- ===== GALERIE MAQUILLAGE ===== -->
+<section class="reveal">
+
+  <div class="title">Galerie Maquillage</div>
+
+  <div class="gallery-container">
+    <div class="gallery-track">
+      <div class="gallery-item">
+        <img src="photomaquillage1.jpg" alt="Maquillage 1">
+      </div>
+      <div class="gallery-item">
+        <img src="photomaquillage2.jpg" alt="Maquillage 2">
+      </div>
+      <div class="gallery-item">
+        <img src="photomaquillage3.jpg" alt="Maquillage 3">
+      </div>
+      <div class="gallery-item">
+        <img src="photomaquillage4.jpg" alt="Maquillage 4">
+      </div>
+      <div class="gallery-item">
+        <img src="photomaquillage5.jpg" alt="Maquillage 5">
+      </div>
+    </div>
+  </div>
+  <p class="gallery-scroll-hint">← Faites défiler pour voir plus →</p>
+
+</section>
+
+<!-- ===== PAIEMENT ===== -->
 <section class="reveal">
 
   <div class="title">Modes de Paiement</div>
@@ -518,30 +592,54 @@ footer a:hover {
 
 </section>
 
+<!-- ===== RESERVATION ===== -->
 <section id="book" class="reveal">
 
   <div class="title">Réservation</div>
 
   <div class="form">
 
-    <input type="text" placeholder="Nom complet">
+    <input type="text" id="nom" placeholder="Nom complet" required>
     
     <div class="select-wrapper">
-      <select>
-        <option>Volume</option>
-        <option>Mega Volume</option>
-        <option>Natural Look</option>
-        <option>Glam Effect</option>
+      <select id="service">
+        <option value="">Choisir un service...</option>
+        <option value="Volume">Volume</option>
+        <option value="Mega Volume">Mega Volume</option>
+        <option value="Natural Look">Natural Look</option>
+        <option value="Glam Effect">Glam Effect</option>
+        <option value="Maquillage Simple">Maquillage Simple</option>
+        <option value="Maquillage Complet">Maquillage Complet</option>
       </select>
       <span class="select-arrow">▼</span>
     </div>
 
-    <button class="btn">Envoyer sur WhatsApp</button>
+    <input type="date" id="date" required>
+    <input type="time" id="heure" required>
+
+    <button class="btn" onclick="envoyerWhatsApp()">Envoyer sur WhatsApp</button>
 
   </div>
 
 </section>
 
+<!-- ===== POURQUOI NOUS CHOISIR (COMPACT) ===== -->
+<section class="reveal why-compact">
+
+  <div class="title">Pourquoi nous choisir</div>
+
+  <div class="why-grid">
+
+    <div class="why-box">Finition luxe & précision</div>
+    <div class="why-box">Résultats longue durée</div>
+    <div class="why-box">Style naturel ou glam</div>
+    <div class="why-box">Service à domicile disponible</div>
+
+  </div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-line">
     <span class="footer-icon">📸</span>
@@ -575,6 +673,23 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+// WhatsApp sender
+function envoyerWhatsApp() {
+  const nom = document.getElementById('nom').value;
+  const service = document.getElementById('service').value;
+  const date = document.getElementById('date').value;
+  const heure = document.getElementById('heure').value;
+
+  if (!nom || !service || !date || !heure) {
+    alert('Veuillez remplir tous les champs !');
+    return;
+  }
+
+  const message = `Bonjour ! Je souhaite réserver un rendez-vous.\n\nNom : ${nom}\nService : ${service}\nDate : ${date}\nHeure : ${heure}`;
+  const url = `https://wa.me/221785453016?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
 </script>
 
 </body>
